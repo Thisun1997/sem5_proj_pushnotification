@@ -30,22 +30,22 @@ Alert.prototype = {
 
         db.collection('locations').doc(district).get()
         .then(doc => {
-            user_ids = doc.data().available_users
-            makelist(user_ids)
+            user_tokens = doc.data().available_users
+            send(user_tokens)
         })
         .catch(err => {
             console.log('Error getting documents', err);
         })
 
-        async function makelist(user_ids){
-            var l = user_ids.length
-            for (var i=0;i<l;i++){
-                let userref = db.collection('users').doc(user_ids[i]).get()
-                let token = (await userref).data().token
-                client_list.push(token)
-            }
-            send(client_list)
-        }
+        // async function makelist(user_ids){
+        //     var l = user_ids.length
+        //     for (var i=0;i<l;i++){
+        //         let userref = db.collection('users').doc(user_ids[i]).get()
+        //         let token = (await userref).data().token
+        //         client_list.push(token)
+        //     }
+        //     send(client_list)
+        // }
 
 
 
