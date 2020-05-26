@@ -1,6 +1,6 @@
 const db = require('../database/config')
 const FCM = require('fcm-node');
-const serverKey = 'AAAAuJRM-o0:APA91bGz0E1Xg_KX6nDtorpVst7tsl3wcfSBKqa89tl70Y7tn6twMCQ2LhYm9BcfDSNmWRyIl41gHK2HFrx1Udy_dhpzrwpwo6yXCHfpJC46BiiB7JK3CcILGtacTMmy2MUFNm6Gt7n7'; // put your server key here
+const serverKey = 'AAAAuJRM-o0:APA91bGKORX2zFjwtOz6gY948-4EuzZJgSIUSpmP2LebX7HYWmKycXuF1iteQlZCEzddDHp5Gy4A8yMz0FGB-W0c6GdfLkjFF3bXzA83JqMdOQEn9JFpYkupje-RkdehxoABqOO3e9XY'; // put your server key here
 const fcm = new FCM(serverKey);
 
 const sendAlert = async(district,title,body,level) =>{

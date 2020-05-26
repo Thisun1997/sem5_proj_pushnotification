@@ -25,7 +25,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_messaging: ^6.0.13
   shared_preferences: ^0.5.6+3
-
+  background_fetch: '^0.5.1'
+  geolocator: ^5.3.1
 
 dev_dependencies:
   flutter_test:

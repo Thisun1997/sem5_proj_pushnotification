@@ -3,7 +3,7 @@ const router = express.Router();
 const AlertController = require('../contoller/sendalert')
 
 
-router.post('/home', AlertController.saveAndSendAlert)
+router.post('/send', AlertController.saveAndSendAlert)
 
 module.exports = router;
 
